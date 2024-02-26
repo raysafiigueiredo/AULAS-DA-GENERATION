@@ -7,124 +7,73 @@ Animal:
 
 package ListaExercicios5;
 
-public class Animal { //SUPER CLASSE
+public class Animal {
+    // Atributos
+    private int idade;
+    private String nome;
+    private boolean emitirSom;
 
-		//ATRIBUTOS
-		private int idade;
-		private String nome;
-		private boolean emitir_som;
+    // Construtor
+    public Animal(String nome, int idade, boolean emitirSom) {
+        this.nome = nome;
+        this.idade = idade;
+        this.emitirSom = emitirSom;
+    }
 
-		//METODO CONSTRUTOR
-		public Animal (String nome, int idade, boolean som)
-		{
-			this.nome= nome;
-			this.idade= idade;
-			this.emitir_som= som;
+    // Getters e Setters
+    public int getIdade() {
+        return idade;
+    }
 
-		}
-		//GET AND SET - METODOS "PUBLICOS" -> PODEM SER CHAMADOS POR OUTRAS API'S
-		public int getIdade() {
-			return idade;
-		}
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
 
-		public void setIdade(int idade) {
-			this.idade = idade;
-		}
+    public String getNome() {
+        return nome;
+    }
 
-		public String getNome() {
-			return nome;
-		}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 
-		public void setNome(String nome) {
-			this.nome = nome;
-		}
+    public boolean isEmitirSom() {
+        return emitirSom;
+    }
 
-		public boolean isEmitir_som() {
-			return emitir_som;
-		}
-
-		public void setEmitir_som(boolean emitir_som) {
-			this.emitir_som = emitir_som;
-		}
-
-
+    public void setEmitirSom(boolean emitirSom) {
+        this.emitirSom = emitirSom;
+    }
 }
- 23  ListaExercicios5/Cachorro.java 
-@@ -0,0 +1,23 @@
+///////////////////////////////  CACHORRO ///////////////////////////////////////////////////////
 package ListaExercicios5;
 
 public class Cachorro extends Animal {
-		private String acao;
-
-		public Cachorro(String nome, int idade, boolean som, String acao) 
-		{
-			super(nome, idade, som);
-			this.acao = acao;	
-		}
-
-		public String getAcao() {
-			return acao;
-		}
-
-		public void setAcao(String acao) {
-			this.acao = acao;
-		}
-
-
-
-
+    public Cachorro(String nome, int idade, boolean emitirSom, String acao) {
+        super(nome, idade, emitirSom);
+        // Você não precisa definir ação aqui, pois já está definido em Animal
+    }
 }
- 22  ListaExercicios5/Cavalo.java 
-@@ -0,0 +1,22 @@
-package ListaExercicios5;
+///////////////////////////////  CAVALO ///////////////////////////////////////////////////////
+ package ListaExercicios5;
 
 public class Cavalo extends Animal {
-	private String acao;
-
-	public Cavalo(String nome, int idade, boolean som, String acao)
-	{
-		super(nome, idade, som);
-		this.acao = acao;
-
-	}
-
-	public String getAcao() 
-	{
-		return acao;
-	}
-
-	public void setAcao(String acao) 
-	{
-		this.acao = acao;
-	}
+    public Cavalo(String nome, int idade, boolean emitirSom, String acao) {
+        super(nome, idade, emitirSom);
+        // Você não precisa definir ação aqui, pois já está definido em Animal
+    }
 }
- 23  ListaExercicios5/Preguica.java 
-@@ -0,0 +1,23 @@
-package ListaExercicios5;
+
+///////////////////////////////  PREGUIÇA ///////////////////////////////////////////////////////
+ package ListaExercicios5;
 
 public class Preguica extends Animal {
-	private String acao;
-
-	public Preguica(String nome, int idade, boolean som, String acao)
-	{
-		super(nome, idade, som);
-		this.acao = acao;
-
-	}
-	public String getAcao() 
-	{
-		return acao;
-	}
-
-	public void setAcao(String acao) 
-	{
-		this.acao = acao;
-	}
-
-
+    public Preguica(String nome, int idade, boolean emitirSom, String acao) {
+        super(nome, idade, emitirSom);
+        // Você não precisa definir ação aqui, pois já está definido em Animal
+    }
 }
- 16  ListaExercicios5/TodosAnimais.java 
-@@ -0,0 +1,16 @@
+/////////////////////////////// TODOS ANIMAIS ///////////////////////////////////////////////////////
 package ListaExercicios5;
 
 public class TodosAnimais {
